@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FirebaseAnalytics } from '@capacitor-firebase/analytics';
 import {
   FirebaseAppCheck,
@@ -10,6 +10,7 @@ import {
   selector: 'app-firebase-app-check',
   templateUrl: './firebase-app-check.page.html',
   styleUrls: ['./firebase-app-check.page.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class FirebaseAppCheckPage {

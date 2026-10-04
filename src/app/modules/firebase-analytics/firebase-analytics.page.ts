@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FirebaseAnalytics } from '@capacitor-firebase/analytics';
 
 @Component({
   selector: 'app-firebase-analytics',
   templateUrl: './firebase-analytics.page.html',
   styleUrls: ['./firebase-analytics.page.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class FirebaseAnalyticsPage implements OnInit {

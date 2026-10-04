@@ -2,11 +2,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "importHelpers": true,
@@ -16,11 +14,11 @@
     "strict": true,
     "skipLibCheck": true /* TODO: remove when https://github.com/ionic-team/ionic-framework/issues/30650 is resolved */,
     "paths": {
-      "@app/*": ["src/app/*"],
-      "@env/*": ["src/environments/*"],
-      "@e2e/*": ["e2e/src/*"],
-      "@tests/*": ["src/tests/*"],
-      "firebase/*": ["node_modules/firebase/*"]
+      "@app/*": ["./src/app/*"],
+      "@env/*": ["./src/environments/*"],
+      "@e2e/*": ["./e2e/src/*"],
+      "@tests/*": ["./src/tests/*"],
+      "firebase/*": ["./node_modules/firebase/*"]
     },
     "useDefineForClassFields": false
   },

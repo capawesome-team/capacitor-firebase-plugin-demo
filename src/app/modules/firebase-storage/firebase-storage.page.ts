@@ -1,4 +1,9 @@
-import { Component, NgZone, OnInit } from '@angular/core';
+import {
+  Component,
+  NgZone,
+  OnInit,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { FirebaseAnalytics } from '@capacitor-firebase/analytics';
 import { FirebaseStorage, StorageReference } from '@capacitor-firebase/storage';
 import { Directory, Filesystem } from '@capacitor/filesystem';
@@ -9,6 +14,7 @@ import { FilePicker } from '@capawesome/capacitor-file-picker';
   selector: 'app-firebase-storage',
   templateUrl: './firebase-storage.page.html',
   styleUrls: ['./firebase-storage.page.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class FirebaseStoragePage implements OnInit {

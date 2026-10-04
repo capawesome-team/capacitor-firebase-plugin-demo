@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FirebaseAnalytics } from '@capacitor-firebase/analytics';
 import { FirebaseCrashlytics } from '@capacitor-firebase/crashlytics';
 
@@ -6,6 +6,7 @@ import { FirebaseCrashlytics } from '@capacitor-firebase/crashlytics';
   selector: 'app-firebase-crashlytics',
   templateUrl: './firebase-crashlytics.page.html',
   styleUrls: ['./firebase-crashlytics.page.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class FirebaseCrashlyticsPage {

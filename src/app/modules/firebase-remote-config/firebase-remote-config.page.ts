@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FirebaseAnalytics } from '@capacitor-firebase/analytics';
 import {
   FirebaseRemoteConfig,
@@ -9,6 +9,7 @@ import {
   selector: 'app-firebase-remote-config',
   templateUrl: './firebase-remote-config.page.html',
   styleUrls: ['./firebase-remote-config.page.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class FirebaseRemoteConfigPage implements OnInit {

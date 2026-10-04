@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FirebaseAnalytics } from '@capacitor-firebase/analytics';
 import { FirebaseFunctions } from '@capacitor-firebase/functions';
 
@@ -6,6 +6,7 @@ import { FirebaseFunctions } from '@capacitor-firebase/functions';
   selector: 'app-firebase-functions',
   templateUrl: './firebase-functions.page.html',
   styleUrls: ['./firebase-functions.page.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class FirebaseFunctionsPage {

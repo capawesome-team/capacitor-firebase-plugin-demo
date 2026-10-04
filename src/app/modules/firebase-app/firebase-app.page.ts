@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FirebaseAnalytics } from '@capacitor-firebase/analytics';
 import { Platform } from '@ionic/angular';
 import { FirebaseApp } from '@capacitor-firebase/app';
@@ -7,6 +7,7 @@ import { FirebaseApp } from '@capacitor-firebase/app';
   selector: 'app-firebase-app',
   templateUrl: './firebase-app.page.html',
   styleUrls: ['./firebase-app.page.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class FirebaseAppPage implements OnInit {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FirebaseAnalytics } from '@capacitor-firebase/analytics';
 import { FirebasePerformance } from '@capacitor-firebase/performance';
 
@@ -6,6 +6,7 @@ import { FirebasePerformance } from '@capacitor-firebase/performance';
   selector: 'app-firebase-performance',
   templateUrl: './firebase-performance.page.html',
   styleUrls: ['./firebase-performance.page.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
 })
 export class FirebasePerformancePage {
