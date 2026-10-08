@@ -57,18 +57,20 @@ On the **Web**, you need to update the `src/environment/environment.ts` and `src
 Prepare and launch the Android app:
 
 ```
-npx ionic cap sync android
-npx ionic cap run android
+npm run build
+npx cap sync android
+npx cap run android
 ```
 
 Prepare and launch the iOS app:
 
 ```
-npx ionic cap sync ios
-npx ionic cap run ios
+npm run build
+npx cap sync ios
+npx cap run ios
 ```
 
-This project uses [Ionic](https://ionicframework.com/) as app development platform and the [Ionic CLI](https://ionicframework.com/docs/cli).
+This project uses [Ionic](https://ionicframework.com/) as app development platform.
 
 <!-- ## Changelog
 
