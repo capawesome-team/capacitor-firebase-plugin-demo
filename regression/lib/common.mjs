@@ -74,7 +74,8 @@ export function swapPackage({ packageName, tarballPath, workDir }, { run }) {
   run('mv', [packageDir, backupDir]);
   mkdirSync(packageDir);
   writeFileSync(join(packageDir, SWAP_MARKER), '');
-  run('tar', ['-xzf', tarballPath, '--strip-components=1', '-C', packageDir]);
+  // ALWAYS extract with `-m`. `npm pack` gives every file the same old date, and Xcode skips sources whose date did not change.
+  run('tar', ['-xzmf', tarballPath, '--strip-components=1', '-C', packageDir]);
 }
 
 export function restorePackage({ packageName, workDir }, { run, log }) {
